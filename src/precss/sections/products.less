@@ -1,0 +1,115 @@
+@purple:#7968E1;
+#products{
+  .white();
+  overflow: hidden;
+}
+.products__row{
+  .row-flex();
+}
+.products__menu {
+  .padding-32();
+  .row-flex();
+  justify-content: center;
+  .hide-small();
+
+  .sm-block({
+    justify-content: space-between;
+  });
+
+  .xs-block({
+    justify-content: center;
+  });
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &-item {
+    .display-container();
+      font-size: 17px;
+      font-family: "Roboto Condensed";
+      color: #6d6d6d;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all .5s;
+
+    a {
+      .button();
+      .transparent();
+      .hover-none();
+    }
+
+    img {
+          position: absolute;
+          right: -9000px;
+
+        }
+      &:hover img{
+        right: 0;
+      }
+      &:hover a {
+        .hover-text-purple();
+      }
+
+
+    }
+
+
+  }
+.products__item{
+  .white();
+  .padding-24();
+  .roboto();
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.692;
+  display: flex;
+  flex-direction: column;
+  .coll();
+  .size(3);
+  .size-sm(6);
+  .size-xs(10);
+  .size-xxs(12);
+  .display-container();
+  transition: all .5s;
+  cursor: pointer;
+
+  &:hover .products__item-btns {
+    left: 50%;
+  }
+  &-name {
+    font-size: 13px;
+    color: #3D3D3D;
+    margin-top: auto;
+  }
+
+  &-price{
+    font-size: 21px;
+    color: #5cb85c;
+  }
+}
+.products__item-btns {
+  .roboto();
+  .display-middle();
+  font-size: 14px;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  left: -9000px;
+
+  .btn {
+    width: 124px;
+    .button();
+    .round-xxlarge();
+    .margin-bottom(10px);
+    background-color: #2E2E2E;
+
+    &__green {
+      background-color: #4bb046;
+    }
+  }
+}

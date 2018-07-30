@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="descrtion" content="" />
+	<meta name="author" content="" />
+
+	<title>ONE – Multipurpose website template</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<style type="text/css">
+		@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:700,300,400);
+		@import url(http://fonts.googleapis.com/css?family=Roboto:300,700,400);
+		* {
+			margin: 0;
+			padding: 0;
+			outline:  none;
+		}
+
+		body {
+			font-family: 'Roboto', sans-serif;
+			font-size: 13px;
+			color : #2f2f2f;
+			background: #fff;
+			font-weight: 300;
+			line-height: 18px;
+		}
+		html, body {
+			height: 100%;
+			width: 100%;
+		}
+		img{
+			height: auto;
+			max-width: 100%;
+		}
+		.hidden{ display: none; }
+		.alignleft{ float: left; }
+		.alignright { float: right; }
+		.aligncenter {
+			margin: auto;
+			display: block;
+			clear: both;
+		}
+		.clear {
+			clear: both;
+			display: block;
+		}
+		*:after,
+		*:before {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		a {
+			padding: 0;
+			margin: 0;
+			color:#3d3d3d;
+			text-decoration: none;
+			transition:all .3s ease-in-out;
+			-moz-transition:all .3s ease-in-out;
+			-ms-transition:all .3s ease-in-out;
+			-o-transition:all .3s ease-in-out;
+			-webkit-transition:all .3s ease-in-out;
+		}
+		a:hover,
+		a:focus {
+		  text-decoration: none;
+		  color:#8d84e4;
+		}
+		a img {
+			border: none;
+			vertical-align: bottom;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-family: 'Roboto', sans-serif;
+			font-weight: 300;
+			color:#2f2f2f;
+		}
+		h1 {font-size: 30px; margin-top:0; line-height:35px;}
+		h2 {font-size: 22px; margin-top:0;}
+		h3 {font-size: 20px; margin-top:0;}
+		h4 {font-size: 18px;}
+		h5 {font-size: 16px;}
+		h6 {font-size: 14px;}
+
+		a img {
+			border: none;
+		}
+
+		.font-1{ font-family: 'Roboto Condensed', sans-serif; }
+
+		/*********** START **************/
+		#header {
+			border-bottom: #dedede solid 1px;
+			padding: 53px 0px;
+		}
+		#header .header-logo{
+			font-size: 20px;
+			font-weight: 300;
+			color : #2f2f2f;
+		}
+
+		/* content */
+		#content {
+			padding: 44px 0px;
+			border-bottom: #dedede solid 1px;
+		}
+		#content .box{
+			margin-bottom: 40px;
+		}
+		#content .box .heading-title{
+			font-size: 20px;
+			margin-bottom: 15px;
+			margin-top : 0;
+			background: url('http://www.woorockets.com/wp-content/uploads/2015/02/rectangle.png') center repeat-x;
+		}
+		#content .box .heading-title span{
+			background: #fff;
+			padding-right: 12px;
+		}
+		#content .box ul li{
+			list-style: url('http://www.woorockets.com/wp-content/uploads/2015/02/arrow-right.png') inside;
+			padding-bottom: 25px;
+			color : #6d6d6d;
+		}
+		#content .box ul li span{
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+		#content .description p{
+			line-height: 22px;
+		}
+
+		#content .box-visit{
+			display: inline-block;
+			width: 47%;
+			margin: 0 1%;
+			border : #ededed solid 2px;
+			border-radius: 4px;
+			line-height: 51px;
+		}
+		#content .box-visit .icon{
+			float: left;
+			width: 31%;
+			border-right: #ededed solid 1px;
+			height: 51px;
+			background: url('http://www.woorockets.com/wp-content/uploads/2015/02/icon-link.png') center no-repeat;
+		}
+		#content .box-visit .icon-dl { background: url('http://www.woorockets.com/wp-content/uploads/2015/02/icon-download.png') center no-repeat; }
+		#content .box-visit .text{
+			float: right;
+			width: 68%;
+			text-align: center;
+			font-weight: 400;
+		}
+
+		/* More Related */
+		#more-related {
+			padding: 50px 0px;
+			border-bottom: #dedede solid 1px;
+		}
+		#more-related .more-title{
+			font-size: 30px;
+			font-weight: 300;
+			text-align: center;
+			padding-bottom: 14px;
+			background: url('http://www.woorockets.com/wp-content/uploads/2015/02/border-title.png') center bottom no-repeat;
+			margin-bottom: 70px;
+		}
+		#more-related .more-item{
+			text-align: center;
+		}
+		#more-related .more-item .title-item a{
+			font-size: 18px;
+			color : #151925;
+			font-weight: 400;
+			margin-top: 40px;
+			margin-bottom: 5px;
+			display: block;
+		}
+		#more-related .more-item .short-des{
+			margin-top: 30px;
+			position: relative;
+			margin-bottom: 15px;
+			color : #6d6d6d;
+		}
+		#more-related .more-item .short-des:before,
+		#more-related .more-item .short-des:after
+		{
+			content: '';
+			background: #CCC;
+			height: 1px;
+			width: 140px;
+			left: 50%;
+			margin-left: -70px;
+			top: -14px;
+			position: absolute;
+		}
+		#more-related .more-item .short-des:after{
+			background: #8D84E4;
+			width: 70px;
+			margin-left: -35px;
+			transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+			-moz-transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+			-ms-transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+			-o-transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+			-webkit-transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+		}
+		#more-related .more-item:hover .short-des:after{
+			width: 140px;
+			margin-left: -70px;
+		}
+		#more-related .more-item .continue a{
+			color : #333;
+		}
+
+		/** SOCIAL **/
+		#social {
+			padding: 50px 0px;
+		}
+		#social .title-social{
+			font-size: 30px;
+			color : #3d3d3d;
+			font-weight: 300;
+			margin-bottom: 33px;
+			text-align: center;
+		}
+		.btn-social {
+			text-align: center;
+		}
+		.btn-social a{
+			display: inline-block;
+			width: 48px;
+			height: 48px;
+			border-radius: 4px;
+			margin: 0px 5px;
+		}
+		.btn-social .btn-fb{
+			background: url('http://www.woorockets.com/wp-content/uploads/2015/02/icon-fb.png') center no-repeat;
+		}
+		.btn-social .btn-twit {
+			background: url('http://www.woorockets.com/wp-content/uploads/2015/02/icon-twit.png') center no-repeat;
+		}
+
+		@media screen and (max-width: 765px){
+			#leftcontent{ margin-bottom: 50px; }
+			#more-related .more-item { margin-bottom: 30px; }
+		}
+	</style>
+</head>
+
+<body>
+	<div id="header">
+		<div class="container">
+			<div class="header-logo-content">
+				<a class="header-logo" href="http://www.woorockets.com/freebie/one-boxed-ecommerce-homepage/?utm_source=one-psd-ecommerce3&utm_medium=about-one&utm_campaign=About-Freebies">ONE – BOXED ECOMMERCE HOMEPAGE</a>
+			</div>
+		</div>
+	</div> <!-- end header -->
+
+	<div id="content">
+		<div class="container">
+		<div class="row">
+
+			<div id="leftcontent" class="col-xs-12 col-sm-8">
+            	<div style="height:914px; overflow:hidden;">
+				<a href="http://www.woorockets.com/wp-content/uploads/2015/02/Home-Ecommerce3.jpg" target="new"><img src="http://www.woorockets.com/wp-content/uploads/2015/02/Home-Ecommerce3.jpg" title="ONE – Multipurpose website template" /></a>
+                </div>
+			</div> <!-- end left content -->
+
+			<div id="rightcontent" class="col-xs-12 col-sm-4">
+				<div class="box info">
+					<h4 class="heading-title">
+						<span>File Info</span>
+					</h4>
+					<ul>
+						<li><span>Project name:</span> ONE Multipurpose website template</li>
+						<li><span>Creator:</span> <a href="http://www.woorockets.com?utm_source=one-psd-ecommerce3&utm_medium=about-one&utm_campaign=About-Freebies">WooRockets</a></li>
+						<li><span>Format:</span> JPG, PSD</li>
+						<li><span>Dimensions:</span> 2560x2592</li>
+					</ul>
+
+					<div class="visit-download">
+						<a class="box-visit" href="http://demo.woorockets.com/#one?utm_source=one-psd-ecommerce3&utm_medium=about-one&utm_campaign=About-Freebies" title="Visit">
+							<i class="icon"></i>
+							<div class="text"><span>Visit Demo</span></div>
+						</a>
+						<a class="box-visit" href="http://www.woorockets.com/freebie/one-boxed-ecommerce-homepage/?utm_source=one-psd-ecommerce3&utm_medium=about-one&utm_campaign=About-Freebies" title="Download">
+							<i class="icon icon-dl"></i>
+							<div class="text"><span>Download</span></div>
+						</a>
+					</div>
+				</div> <!-- end box -->
+
+				<div class="box description">
+					<h4 class="heading-title">
+						<span>Description</span>
+					</h4>
+					<p>This is a homepage layout template belonging to ONE’s homepage layouts collection. You can find other homepage versions of ONE with different sliders, parallax section, portfolio showcase and so on, that may inspire you and your work.</p>
+				</div> <!-- end box -->
+
+				<div class="box info">
+					<h4 class="heading-title">
+						<span>License</span>
+					</h4>
+					<ul>
+						<li>ONE PSD Website Template is free for both personal and commercial projects.</li>
+						<li>We require attribution or backlinks when using our products.</li>
+						<li>You must not resell any elements or redistribute them in any other way.</li>
+						<li>This file as such is the property of the author.</li>
+						<li>Intellectual property rights are not transferred with the download of this file.</li>
+					</ul>
+				</div> <!-- end box -->
+			</div> <!-- end right content -->
+		</div>
+		</div>
+	</div> <!-- end content -->
+
+	<div id="more-related">
+		<div class="container">
+			<h2 class="more-title">More from WooRockets</h2>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 more-item">
+					<a href="http://www.woorockets.com/freebie?utm_source=one-psd-ecommerce3&utm_medium=about-one&utm_campaign=About-Freebies" title="Freebie">
+						<img src="http://www.woorockets.com/wp-content/uploads/2015/02/item1.jpg" />
+					</a>
+					<h3 class="title-item"><a href="http://www.woorockets.com/freebie?utm_source=one-psd-ecommerce3&utm_medium=about-one&utm_campaign=About-Freebies" class="font-1" title="Freebie">Freebies</a></h3>
+					<p class="short-des">Download PSD website templates and Icon packs</p>
+					<div class="continue"><a href="http://www.woorockets.com/freebie?utm_source=one-psd-ecommerce3&utm_medium=about-one&utm_campaign=About-Freebies" title="Download Now">» Download Now</a></div>
+				</div>
+
+				<div class="col-xs-12 col-sm-4 more-item">
+					<a href="http://www.woorockets.com/themes?utm_source=one-psd-ecommerce3&utm_medium=about-one&utm_campaign=About-Freebies" title="Wordpress Theme">
+						<img src="http://www.woorockets.com/wp-content/uploads/2015/02/item2.jpg" />
+					</a>
+					<h3 class="title-item"><a class="font-1" href="http://www.woorockets.com/themes?utm_source=one-psd-ecommerce3&utm_medium=about-one&utm_campaign=About-Freebies" title="Wordpress Theme">Wordpress Themes</a></h3>
+					<p class="short-des">Creative, beautiful themes with powerful functions</p>
+					<div class="continue"><a href="http://www.woorockets.com/themes?utm_source=one-psd-ecommerce3&utm_medium=about-one&utm_campaign=About-Freebies" title="Learn More">» Learn More</a></div>
+				</div>
+
+				<div class="col-xs-12 col-sm-4 more-item">
+					<a href="http://www.woorockets.com/plugins/wr-pagebuilder/?utm_source=one-psd-ecommerce3&utm_medium=about-one&utm_campaign=About-Freebies" title="WR PAGEBUILDER">
+						<img src="http://www.woorockets.com/wp-content/uploads/2015/02/item3.jpg" />
+					</a>
+					<h3 class="title-item"><a class="font-1" href="http://www.woorockets.com/plugins/wr-pagebuilder/?utm_source=one-psd-ecommerce3&utm_medium=about-one&utm_campaign=About-Freebies" title="WR PAGEBUILDER">WR PageBuilder</a></h3>
+					<p class="short-des">Drag&Drop tool to help you build awesome website with ease</p>
+					<div class="continue"><a href="http://www.woorockets.com/plugins/wr-pagebuilder/?utm_source=one-psd-ecommerce3&utm_medium=about-one&utm_campaign=About-Freebies" title="Learn More">» Learn More</a></div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- end more related -->
+
+	<div id="social">
+		<div class="container">
+			<h2 class="title-social">Find us on social media</h2>
+
+			<div class="btn-social">
+				<a class="btn-fb" href="https://www.facebook.com/woorockets" title="FaceBook"></a>
+				<a class="btn-twit" href="http://www.twitter.com/WooRockets" title="Twitter"></a>
+			</div>
+		</div>
+	</div> <!-- end social -->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
